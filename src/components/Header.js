@@ -5,13 +5,13 @@ import '../css/header.css';
 const Header = () => (
   <header>
     <nav>
-      <NavLink to="/" activeClassName="active">
+      <NavLink to="/" activeclassname="active">
         Rockets
       </NavLink>
-      <NavLink to="/missions" activeClassName="active">
+      <NavLink to="/missions" activeclassname="active">
         Missions
       </NavLink>
-      <NavLink to="/profile" activeClassName="active">
+      <NavLink to="/profile" activeclassname="active">
         My Profile
       </NavLink>
     </nav>
