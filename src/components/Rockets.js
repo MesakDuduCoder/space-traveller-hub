@@ -18,7 +18,7 @@ function Rockets() {
     );
   }
 
-  return <div>Rockets</div>;
+  return <div>Rocketss</div>;
 }
 
 export default Rockets;
