@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
 import { fetchMission } from '../redux/mission/missionSlice';
+import MissionItem from './MissionItem';
 import '../css/mission.css';
 
 function Missions() {
@@ -10,8 +10,7 @@ function Missions() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchMission());
-  }, []);
-  console.log(missions);
+  }, [dispatch]);
   if (isLoading) {
     return (
       <>
@@ -34,10 +33,12 @@ function Missions() {
         <tbody>
           {missions.map((mission) => (
             <tr key={mission.id}>
-              <td>{mission.name}</td>
-              <td>{mission.description}</td>
-              <td className="flex"><p className="description-item">Not a member</p></td>
-              <td className="flex"><Button variant="outline-secondary" className="btn">Join Mission</Button></td>
+              <MissionItem
+                id={mission.id}
+                name={mission.name}
+                description={mission.description}
+                reserved={mission.reserved}
+              />
             </tr>
           ))}
         </tbody>
