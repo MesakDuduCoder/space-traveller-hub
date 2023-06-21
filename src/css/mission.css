@@ -1,11 +1,11 @@
 .status {
-  width: 10%;
+  width: 12%;
 }
 
 .description-item {
   position: absolute;
   top: 50%;
-  left: -40%;
+  left: -26%;
   transform: translate(50%, -50%);
 }
 
@@ -18,7 +18,8 @@ p.description-item {
 
 .flex {
   position: relative;
-  padding: 2%;
+  padding: 10%;
+  height: auto;
 }
 
 button.btn {
@@ -26,6 +27,10 @@ button.btn {
   border-radius: 5px;
   position: absolute;
   top: 50%;
-  left: -30%;
+  left: -19%;
   transform: translate(50%, -50%);
+}
+
+p.blue {
+  background-color: #18a2b8;
 }
