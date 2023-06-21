@@ -1,0 +1,14 @@
+
+.col {
+  border: 1px solid #ebebeb;
+  padding: 2%;
+  margin-left: 2%;
+}
+
+.row {
+  flex-direction: column;
+}
+
+.missions {
+  width: 50%;
+}
