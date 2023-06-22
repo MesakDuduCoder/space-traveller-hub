@@ -1,0 +1,64 @@
+.rockets {
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.rocket {
+  display: flex;
+}
+
+.imageBox {
+  width: 350px;
+  height: 200px;
+}
+
+.rocketImage {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.rocketDetails {
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.rocketDetails h2 {
+  margin: 0 0 10px 0;
+}
+
+.reserved {
+  background-color: skyblue;
+  color: white;
+  margin-right: 5px;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 0.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.reserveRocket {
+  color: white;
+  background-color: #0066b2;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+
+}
+
+.cancelRocket {
+  color: white;
+  background-color: #0066b2;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+
+}

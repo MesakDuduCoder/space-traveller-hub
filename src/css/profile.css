@@ -1,0 +1,15 @@
+.myProfile {
+    padding: 20px;
+    display: flex;
+}
+
+.myRockets {
+  padding: 0;
+  list-style: none;
+  width: 50%;
+}
+
+.myRockets li {
+  border: 1px solid black;
+  padding: 5px 10px;
+}
