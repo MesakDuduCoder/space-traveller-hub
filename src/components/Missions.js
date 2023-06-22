@@ -15,7 +15,7 @@ function Missions() {
   }
 
   return (
-    <div>
+    <div className="container">
       <Table striped bordered className="Table">
         <thead>
           <tr>
