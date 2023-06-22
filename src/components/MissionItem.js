@@ -21,9 +21,14 @@ const MissionItem = ({
     <>
       <td>{name}</td>
       <td>{description}</td>
-      <td className="flex"><p className={member.memberBg}>{member.memberStatus}</p></td>
+      <td className="flex">
+        <p data-testid="activeMember" className={member.memberBg}>
+          {member.memberStatus}
+        </p>
+      </td>
       <td className="flex">
         <Button
+          data-testid="joinMission"
           variant={member.variant}
           onClick={() => clickHandler(id)}
           className="btn"
@@ -31,7 +36,6 @@ const MissionItem = ({
           {member.buttonName}
         </Button>
       </td>
-
     </>
   );
 };
