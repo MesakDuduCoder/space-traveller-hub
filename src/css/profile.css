@@ -1,14 +1,17 @@
 
-.col {
-  border: 1px solid #ebebeb;
-  padding: 2%;
-  margin-left: 2%;
+.myProfile {
+  padding: 20px;
+  display: flex;
+  gap: 30px;
 }
 
-.row {
-  flex-direction: column;
-}
-
-.missions {
+.myRockets {
+  padding: 0;
+  list-style: none;
   width: 50%;
+}
+
+.myRockets li {
+  border: 1px solid black;
+  padding: 5px 10px;
 }

@@ -1,16 +1,11 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
-import { fetchMission } from '../redux/mission/missionSlice';
 import MissionItem from './MissionItem';
 import '../css/mission.css';
 
 function Missions() {
   const { missions, isLoading } = useSelector((store) => store.mission);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchMission());
-  }, [dispatch]);
   if (isLoading) {
     return (
       <>
