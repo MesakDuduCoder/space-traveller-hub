@@ -5,12 +5,17 @@ import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import Header from './components/Header';
 import Profile from './components/Profile';
+import { getRockets } from './redux/rockets/rocketSlice';
 import { fetchMission } from './redux/mission/missionSlice';
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchMission());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getRockets());
   }, [dispatch]);
   return (
     <div className="app">

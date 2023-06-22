@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const getRockets = createAsyncThunk(
-  'books/getRockets',
+  'rockets/getRockets',
   async (name, thunkAPI) => {
     try {
       const resp = await axios('https://api.spacexdata.com/v4/rockets');
@@ -21,6 +21,24 @@ export const getRockets = createAsyncThunk(
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
+  reducers: {
+    reserveRocket: (state, action) => {
+      const id = action.payload;
+      const newState = state.rockets.map((rocket) => {
+        if (rocket.id !== id) return rocket;
+        return { ...rocket, reserved: true };
+      });
+      state.rockets = newState;
+    },
+    cancelReserveRocket: (state, action) => {
+      const id = action.payload;
+      const newState = state.rockets.map((rocket) => {
+        if (rocket.id !== id) return rocket;
+        return { ...rocket, reserved: false };
+      });
+      state.rockets = newState;
+    },
+  },
   extraReducers: {
     [getRockets.pending]: (state) => {
       state.isLoading = true;
@@ -33,7 +51,7 @@ const rocketsSlice = createSlice({
         newRockets.push({
           id: rocket.id,
           name: rocket.name,
-          type: rocket.type,
+          description: rocket.description,
           flickr_images: rocket.flickr_images[0],
         });
       });
@@ -44,5 +62,6 @@ const rocketsSlice = createSlice({
     },
   },
 });
+export const { reserveRocket, cancelReserveRocket } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
