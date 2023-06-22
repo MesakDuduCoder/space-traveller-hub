@@ -14,7 +14,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[SPACE TRAVELERS' HUB\] ](#-space travelers' hub-)
+- [📖 About the Project](#about-project)
   - [🛠 Built With HTML,CSS \& Javascript](#-built-with-htmlcss--javascript)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -73,17 +73,11 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-
-
-- [Live Demo Link](coming soon .........)
+- [Live Demo Link](https://space-travellers-ebui.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ## 💻 Getting Started <a name="getting-started"></a>
-
-
 
 To get a local copy up and running, follow these steps.
 
