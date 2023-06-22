@@ -8,38 +8,27 @@ function Profile() {
   const { missions } = useSelector((store) => store.mission);
   const joinedMission = missions.filter((mission) => mission.reserved === true);
 
-  if (reservedRockets.length > 0 && joinedMission.length > 0) {
-    return (
-      <div className="myProfile">
-        <ul className="myRockets">
-          <h2>My Missions</h2>
-          {joinedMission.map((mission) => (
-            <li key={mission.id}>
-              <h3>{mission.name}</h3>
-            </li>
-          ))}
-        </ul>
-        <ul className="myRockets">
-          <h2>My Rockets</h2>
-          {reservedRockets.map((rocket) => (
-            <li key={rocket.id}>
-              <h3>{rocket.name}</h3>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-
   return (
     <div className="myProfile">
       <ul className="myRockets">
-        <h2>My Mission</h2>
-        <li>No reserved mission</li>
+        <h2>My Missions</h2>
+        {joinedMission.length > 0
+          ? joinedMission.map((mission) => (
+            <li key={mission.id}>
+              <h3>{mission.name}</h3>
+            </li>
+          ))
+          : <li>No reserved mission</li>}
       </ul>
       <ul className="myRockets">
         <h2>My Rockets</h2>
-        <li>No reserved rockets</li>
+        {reservedRockets.length > 0
+          ? reservedRockets.map((rocket) => (
+            <li key={rocket.id}>
+              <h3>{rocket.name}</h3>
+            </li>
+          ))
+          : <li>No reserved rockets</li>}
       </ul>
     </div>
   );

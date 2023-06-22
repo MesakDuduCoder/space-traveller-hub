@@ -2,14 +2,11 @@
   width: 12%;
 }
 
-.description-item {
+p.description-item {
   position: absolute;
   top: 50%;
-  left: -26%;
+  left: -31%;
   transform: translate(50%, -50%);
-}
-
-p.description-item {
   background-color: rgb(90, 90, 90);
   padding: 2%;
   color: #fff;
@@ -27,7 +24,7 @@ button.btn {
   border-radius: 5px;
   position: absolute;
   top: 50%;
-  left: -19%;
+  left: -25%;
   transform: translate(50%, -50%);
 }
 
