@@ -46,19 +46,17 @@
   border-radius: 5px;
   margin-top: 20px;
   padding: 10px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
-
 }
 
 .cancelRocket {
   color: white;
-  background-color: #0066b2;
+  background-color: #EF0107;
   border: none;
   border-radius: 5px;
   margin-top: 20px;
   padding: 10px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
-
 }

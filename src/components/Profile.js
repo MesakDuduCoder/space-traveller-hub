@@ -1,15 +1,24 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import '../css/profile.css'
+import '../css/profile.css';
 
 function Profile() {
   const { rockets } = useSelector((store) => store.rockets);
   const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
+  const { missions } = useSelector((store) => store.mission);
+  const joinedMission = missions.filter((mission) => mission.reserved === true);
 
-  if (reservedRockets.length>0) {
+  if (reservedRockets.length > 0 && joinedMission.length > 0) {
     return (
       <div className="myProfile">
-
+        <ul className="myRockets">
+          <h2>My Missions</h2>
+          {joinedMission.map((mission) => (
+            <li key={mission.id}>
+              <h3>{mission.name}</h3>
+            </li>
+          ))}
+        </ul>
         <ul className="myRockets">
           <h2>My Rockets</h2>
           {reservedRockets.map((rocket) => (
@@ -18,18 +27,22 @@ function Profile() {
             </li>
           ))}
         </ul>
-
       </div>
     );
   }
 
   return (
-    <div >
-  <h2>asd</h2>
+    <div className="myProfile">
+      <ul className="myRockets">
+        <h2>My Mission</h2>
+        <li>No reserved mission</li>
+      </ul>
+      <ul className="myRockets">
+        <h2>My Rockets</h2>
+        <li>No reserved rockets</li>
+      </ul>
     </div>
   );
-
-
 }
 
 export default Profile;

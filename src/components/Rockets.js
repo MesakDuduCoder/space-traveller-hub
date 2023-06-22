@@ -26,7 +26,7 @@ function Rockets() {
               {rocket.reserved ? (
                 <span className="reserved">Reserved</span>
               ) : (
-                ""
+                ''
               )}
               <span>{rocket.description}</span>
             </div>

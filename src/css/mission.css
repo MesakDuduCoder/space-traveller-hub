@@ -1,0 +1,36 @@
+.status {
+  width: 12%;
+}
+
+.description-item {
+  position: absolute;
+  top: 50%;
+  left: -26%;
+  transform: translate(50%, -50%);
+}
+
+p.description-item {
+  background-color: rgb(90, 90, 90);
+  padding: 2%;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.flex {
+  position: relative;
+  padding: 10%;
+  height: auto;
+}
+
+button.btn {
+  padding: 3%;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: -19%;
+  transform: translate(50%, -50%);
+}
+
+p.blue {
+  background-color: #18a2b8;
+}

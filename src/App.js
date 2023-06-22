@@ -1,19 +1,22 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import Header from './components/Header';
 import Profile from './components/Profile';
-import { useEffect } from 'react';
 import { getRockets } from './redux/rockets/rocketSlice';
-import { useDispatch } from 'react-redux';
+import { fetchMission } from './redux/mission/missionSlice';
 
 function App() {
-
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchMission());
+  }, [dispatch]);
+  
   useEffect(() => {
     dispatch(getRockets());
   }, [dispatch]);
-
   return (
     <div className="app">
       <Header />
